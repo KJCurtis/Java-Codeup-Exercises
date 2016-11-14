@@ -51,6 +51,7 @@ Food for thought: What happens if we try to divide by zero? What should happen?
     }
     public static int toDivInput(int a, int b) {
         if (b == 0) {
+            System.out.println("cannot divide by zero!");
             return 0;
         } else {
             return a / b;
