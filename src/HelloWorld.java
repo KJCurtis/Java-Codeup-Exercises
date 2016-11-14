@@ -2,6 +2,7 @@
  * Created by KJCurtis on 11/11/16.
  * First HelloWorld for JAVA
  */
+import java.util.Scanner;
 public class HelloWorld {  //psvm + enter will autotype:
     public static void main(String[] args) {
         //you have to declare the data type when you declare a variable in JAVA
@@ -33,9 +34,22 @@ public class HelloWorld {  //psvm + enter will autotype:
 
         int result = multiply(2, 3);
         System.out.println("2 multiplied by 3 is " + result);
+        int printConsole = 87;
+        System.out.println(printConsole);
+
+
+
+        String userInput;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter something: ");
+        userInput = sc.nextLine();
+        System.out.println("You Entered: " + userInput);
 
     }
     public static int multiply(int a, int b) {
-        return a *b;
+        return a * b;
     }
+
+
+
 }
