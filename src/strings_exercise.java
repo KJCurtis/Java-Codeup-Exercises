@@ -15,6 +15,15 @@ public class strings_exercise {
             }
             i++;
         }
+        System.out.println("check \"this\" out!");
+        System.out.printf("In windows, the main drive is usually C:\\\n");
+        System.out.printf("I can do back slashes \\, and double back slashes \\\\, and the amazing triple back-slash \\\\\\!\n");
+        //exercise class review
+
+
+
+
+
         System.out.println("\n Pig latin Exercise: \n");
 
         /*
