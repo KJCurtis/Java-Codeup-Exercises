@@ -48,11 +48,12 @@ public class ExeptErrorHandlingExerciseThree {
     public static int toPlayAgain(Scanner input) {
         try {
             System.out.print("would you like to play again? (Y/N): ");
-            char playAgain = input.next().trim().charAt(0);
+            char playAgain = input.next().trim().toLowerCase().charAt(0);
             if (playAgain == 'y') {
                 return mainGame();
             } else if (playAgain == 'n') {
                 System.out.println("have a good day!");
+                input.close();
                 System.exit(0);
             } else {
                 System.out.println(playAgain);
