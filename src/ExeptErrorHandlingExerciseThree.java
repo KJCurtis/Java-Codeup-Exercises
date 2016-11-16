@@ -34,7 +34,7 @@ public class ExeptErrorHandlingExerciseThree {
         int userInput = getInput(input);
             if (userInput == ranInt) {
                 System.out.println("congratulations you guessed the random number!");
-                System.exit(0);
+                return toPlayAgain(input);
             } else if (userInput < ranInt) {
                 System.out.println("Your Guess was Low");
                 return isRanFound(ranInt);
@@ -44,18 +44,19 @@ public class ExeptErrorHandlingExerciseThree {
             }
         return isRanFound(ranInt);
     }
-/*
+
     public static int toPlayAgain(Scanner input) {
         try {
             System.out.print("would you like to play again? (Y/N): ");
-            String playAgain = input.next();
-            if (!playAgain.equalsIgnoreCase("Y") || !playAgain.equalsIgnoreCase("N")) {
-                throw new InputMismatchException("Input must either be 'y' or 'n'");
-            } else if (playAgain.equalsIgnoreCase("Y")) {
+            char playAgain = input.next().trim().charAt(0);
+            if (playAgain == 'y') {
                 return mainGame();
-            } else if (playAgain.equalsIgnoreCase("N")) {
+            } else if (playAgain == 'n') {
                 System.out.println("have a good day!");
                 System.exit(0);
+            } else {
+                System.out.println(playAgain);
+                throw new InputMismatchException("Input must either be 'y' or 'n'");
             }
 
         } catch (InputMismatchException e) {
@@ -63,7 +64,7 @@ public class ExeptErrorHandlingExerciseThree {
             return toPlayAgain(input);
         }
         return mainGame();
-    }*/
+    }
 
 
 
