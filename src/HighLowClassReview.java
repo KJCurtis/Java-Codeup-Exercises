@@ -1,6 +1,7 @@
 /**
  * Created by KJCurtis on 11/16/16.
  */
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class HighLowClassReview {
@@ -25,7 +26,14 @@ public class HighLowClassReview {
         int userInput;
        Scanner sc = new Scanner(System.in);
         System.out.print("PLease guess a number between 1 and 100: ");
-        userInput = sc.nextInt();
+
+        try {
+            userInput = sc.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Guess must be an inteer");
+            return getUserGuess();
+        }
+
         return userInput;
     }
 }
